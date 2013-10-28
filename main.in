@@ -1,0 +1,106 @@
+# Graphene
+#	Small Supercell (3x3x1)
+#	Perfect, no defects
+# 	He atom from -0.5 to +0.5 (11 datasets)
+
+
+#define the convergence tolerance
+tolvrs 1.0d-18
+
+#define the scale and units
+acell 1 1 1 Angstrom
+
+#define the lattice
+rprim
+0.0 2.44 0.0
+2.115 -1.221 0.0
+0.0 0.0 -16.0
+
+#define the atom types
+ntypat 2
+znucl 6 2
+
+#definition of the atoms
+natom 17
+typat 16*1 2
+
+# Loop through 11 datasets with systematically varying He position relative to Graphene sheet
+ndtset 11
+
+# Atom positions in reduced coordinates
+xred: 
+
+# First column
+-0.3333 0.0 0.0
+-0.2222 0.2222 0.0
+
+0.0 0.0 0.0
+0.1111 0.2222 0.0
+
+0.3333 0.0 0.0
+0.4444 0.2222 0.0
+
+# Second column
+-0.3333 0.3333 0.0 
+-0.2222 0.5556 0.0
+
+0.0 0.3333 0.0 
+0.1111 0.5556 0.0
+
+0.3333 0.3333 0.0 
+0.4444 0.5556 0.0
+
+# Third column
+0.3333 0.6667 0.0
+0.4444 0.8889 0.0
+
+# Single C atoms
+0.0 0.6667 0.0
+0.6667 0.6667 0.0
+
+# Helium atom
+0.5556 0.7777 -0.5
+
+xred+ 
+
+# First column
+0.0 0.0 0.0
+0.0 0.0 0.0
+
+0.0 0.0 0.0
+0.0 0.0  0.0
+
+0.0 0.0 0.0
+0.0 0.0 0.0
+
+# Second column
+0.0 0.0 0.0 
+0.0 0.0 0.0
+
+0.0 0.0 0.0 
+0.0 0.0 0.0
+
+0.0 0.0 0.0 
+0.0 0.0 0.0
+
+# Third column
+0.0 0.0 0.0
+0.0 0.0 0.0
+
+# Single C atoms
+0.0 0.0 0.0
+0.0 0.0 0.0
+
+
+# Helium atom
+0.0 0.0 0.1
+
+getwfk -1
+
+#the cutoff
+ecut 
+800 eV
+
+#define the k-point grid
+ngkpt 8 8 1
+Chksymbreak = 0
